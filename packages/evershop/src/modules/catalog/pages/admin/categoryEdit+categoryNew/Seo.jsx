@@ -10,17 +10,6 @@ export default function Seo({ category }) {
     {
       component: { default: Field },
       props: {
-        id: 'amazonUrl',
-        name: 'amazon_url',
-        label: 'Amazon Url',
-        validationRules: ['notEmpty'],
-        type: 'text'
-      },
-      sortOrder: 0
-    },
-    {
-      component: { default: Field },
-      props: {
         id: 'urlKey',
         name: 'url_key',
         label: 'Url key',
@@ -85,8 +74,7 @@ Seo.propTypes = {
     metaDescription: PropTypes.string,
     metaKeywords: PropTypes.string,
     metaTitle: PropTypes.string,
-    urlKey: PropTypes.string,
-    amazonUrl: PropTypes.string
+    urlKey: PropTypes.string
   })
 };
 
@@ -96,7 +84,6 @@ Seo.defaultProps = {
     metaKeywords: '',
     metaTitle: '',
     urlKey: '',
-    amazonUrl: ''
   }
 };
 
@@ -112,7 +99,6 @@ export const query = `
       metaTitle
       metaKeywords
       metaDescription
-      amazonUrl
     }
   }
 `;
