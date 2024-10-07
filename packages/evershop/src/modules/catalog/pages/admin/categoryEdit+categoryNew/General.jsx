@@ -173,6 +173,7 @@ General.propTypes = {
   uploadApi: PropTypes.string.isRequired,
   category: PropTypes.shape({
     name: PropTypes.string,
+    amazon_url: PropTypes.string,
     description: PropTypes.string,
     categoryId: PropTypes.number,
     parent: PropTypes.shape({
