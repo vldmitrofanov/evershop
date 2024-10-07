@@ -72,7 +72,7 @@ Seo.propTypes = {
     urlKey: PropTypes.string,
     metaTitle: PropTypes.string,
     metaKeywords: PropTypes.string,
-    metaDescription: PropTypes.string,
+    metaDescription: PropTypes.string
   })
 };
 

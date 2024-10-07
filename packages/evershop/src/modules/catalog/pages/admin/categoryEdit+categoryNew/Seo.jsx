@@ -83,7 +83,7 @@ Seo.defaultProps = {
     metaDescription: '',
     metaKeywords: '',
     metaTitle: '',
-    urlKey: '',
+    urlKey: ''
   }
 };
 
