@@ -21,6 +21,9 @@
         "pattern": "Url key should not contain spaces"
       }
     },
+    "amazon_url" :{
+      "type": "string"
+    },
     "meta_title": {
       "type": "string"
     },

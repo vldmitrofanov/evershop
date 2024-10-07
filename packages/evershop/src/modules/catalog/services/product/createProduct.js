@@ -28,7 +28,8 @@ function validateProductDataBeforeInsert(data) {
     'qty',
     'price',
     'group_id',
-    'visibility'
+    'visibility',
+    'amazon_url'
   ];
   const jsonSchema = getValueSync(
     'createProductDataJsonSchema',
