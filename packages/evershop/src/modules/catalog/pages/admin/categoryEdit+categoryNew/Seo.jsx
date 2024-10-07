@@ -12,7 +12,7 @@ export default function Seo({ category }) {
       props: {
         id: 'amazonUrl',
         name: 'amazon_url',
-        label: 'amazon_url',
+        label: 'Amazon Url',
         validationRules: ['notEmpty'],
         type: 'text'
       },
@@ -27,7 +27,7 @@ export default function Seo({ category }) {
         validationRules: ['notEmpty'],
         type: 'text'
       },
-      sortOrder: 0
+      sortOrder: 2
     },
     {
       component: { default: Field },
@@ -86,7 +86,7 @@ Seo.propTypes = {
     metaKeywords: PropTypes.string,
     metaTitle: PropTypes.string,
     urlKey: PropTypes.string,
-    amazonUrl: PropTypes.string,
+    amazonUrl: PropTypes.string
   })
 };
 

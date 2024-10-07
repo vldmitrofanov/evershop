@@ -107,18 +107,6 @@ export default function General({
       id: 'name'
     },
     {
-      component: { default: Field },
-      props: {
-        id: 'amazon_url',
-        name: 'amazon_url',
-        label: 'Amazon Url',
-        validationRules: ['notEmpty'],
-        type: 'text'
-      },
-      sortOrder: 11,
-      id: 'amazon_url'
-    },
-    {
       component: { default: ParentCategory },
       props: {
         parent: category?.parent,
