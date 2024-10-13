@@ -87,7 +87,7 @@ ToastMessage.propTypes = {
 function AddToCart({ stockAvaibility, loading = false, error }) {
   return (
     <div className="add-to-cart mt-8">
-      <div style={{ width: '8rem' }}>
+      {false &&<div style={{ width: '8rem' }}>
         <Field
           type="text"
           value="1"
@@ -97,12 +97,12 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
           placeholder={_('Qty')}
           formId="productForm"
         />
-      </div>
+      </div>}
       {error && <div className="text-critical mt-4">{error}</div>}
       <div className="mt-4">
         {stockAvaibility === true && (
           <Button
-            title={_('ADD TO CART')}
+            title={'Buy Now'}
             outline
             isLoading={loading}
             onAction={() => {
