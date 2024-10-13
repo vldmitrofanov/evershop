@@ -102,7 +102,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
       <div className="mt-4">
         {stockAvaibility === true && (
           <Button
-            title={'Buy Now'}
+            title="Buy Now"
             outline
             isLoading={loading}
             onAction={() => {
