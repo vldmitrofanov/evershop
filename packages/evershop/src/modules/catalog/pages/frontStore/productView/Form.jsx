@@ -84,7 +84,7 @@ ToastMessage.propTypes = {
   toastId: PropTypes.string.isRequired
 };
 
-function AddToCart({ stockAvaibility, loading = false, error }) {
+function AddToCart({ stockAvaibility, loading = false, error, amazonUrl }) {
   return (
     <div className="add-to-cart mt-8">
       {false &&<div style={{ width: '8rem' }}>
@@ -106,11 +106,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
             outline
             isLoading={loading}
             onAction={() => {
-              document
-                .getElementById('productForm')
-                .dispatchEvent(
-                  new Event('submit', { cancelable: true, bubbles: true })
-                );
+              document.location.href = amazonUrl
             }}
           />
         )}
@@ -125,7 +121,8 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
 AddToCart.propTypes = {
   error: PropTypes.string,
   loading: PropTypes.bool.isRequired,
-  stockAvaibility: PropTypes.bool.isRequired
+  stockAvaibility: PropTypes.bool.isRequired,
+  amazonUrl: PropTypes.string.isRequired
 };
 
 AddToCart.defaultProps = {
@@ -187,7 +184,8 @@ export default function ProductForm({ product, action }) {
             props: {
               stockAvaibility: product.inventory.isInStock,
               loading,
-              error
+              error,
+              amazonUrl: product.amazonUrl
             },
             sortOrder: 50,
             id: 'productSingleBuyButton'
@@ -205,7 +203,8 @@ ProductForm.propTypes = {
       isInStock: PropTypes.bool.isRequired
     }).isRequired,
     name: PropTypes.string.isRequired,
-    sku: PropTypes.string.isRequired
+    sku: PropTypes.string.isRequired,
+    amazonUrl: PropTypes.string.isRequired
   }).isRequired
 };
 
@@ -220,6 +219,7 @@ export const query = `
       productId
       sku
       name
+      amazonUrl
       gallery {
         thumb
       }
