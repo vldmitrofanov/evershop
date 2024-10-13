@@ -1,9 +1,9 @@
-//import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
 import './MiniCart.scss';
 // import Bag from '@heroicons/react/outline/ShoppingBagIcon';
-//import { useAppState } from '@components/common/context/app';
-//import { get } from '@evershop/evershop/src/lib/util/get';
+// import { useAppState } from '@components/common/context/app';
+// import { get } from '@evershop/evershop/src/lib/util/get';
 
 export default function MiniCart() {
   // const miniCart = get(useAppState(), 'cart', cart || {});
