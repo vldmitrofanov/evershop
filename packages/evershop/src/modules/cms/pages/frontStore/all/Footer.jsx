@@ -57,8 +57,8 @@ function Footer({ themeConfig: { copyRight } }) {
             <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    height="61px"
-    width="109px"
+    height="24px"
+    width="38px"
     version="1.1"
     viewBox="0 0 291.764 291.764"
     xmlSpace="preserve"
